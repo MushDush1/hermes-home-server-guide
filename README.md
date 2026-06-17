@@ -8,9 +8,15 @@
 
 ## 环境
 
-- Windows 10/11 x64
-- Python >= 3.10
-- WeChat 4.1.6.14（必须此版本）
+| 组件 | 版本 |
+|------|------|
+| OS | Windows 10/11 x64 |
+| Python | >= 3.10 |
+| WeChat | **4.1.6.14**（唯一兼容版本，4.1.6.46 / 4.1.10 不可用） |
+| pywinauto | >= 0.6.8（UIA backend） |
+| pywechat127 | 1.9.8 |
+
+> 微信必须使用 4.1.6.14——此版本保留 `mmui::MainWindow` 类名和完整 Qt Accessibility 树。后续版本切换了 UI 框架但未暴露 UIA 接口，导致 pywinauto 无法读取控件树。
 
 ## 快速开始
 
