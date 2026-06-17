@@ -91,24 +91,6 @@ friends = Contacts.get_friends_info()
 Navigator.open_dialog_window(friend='张三')
 ```
 
-## QQ ↔ WeChat 桥接
-
-通过 QQ Bot 指令操控微信：
-
-| QQ 指令 | 功能 |
-|---------|------|
-| `发微信 <联系人> <消息>` | 发文本 |
-| `发文件 <联系人> <路径>` | 发文件 |
-| `查微信` | 检查在线状态 |
-| `查聊天 <联系人>` | 打开聊天窗口 |
-| `微信联系人` | 列好友（前 20 人）|
-
-### 桥接脚本
-
-```bash
-python scripts/qq_wechat_bridge.py "发微信 文件传输助手 测试"
-```
-
 ## UIA 监控 Bot
 
 基于 `pywinauto` UIA 后端直接读取微信聊天列表，不依赖 OCR 或外部分析：
@@ -161,17 +143,11 @@ Toxic 模型群友（4 分钟 6 轮互动）：
 ## 文件清单
 
 ```
-F:\AI\Hermes_Agent_Check_bill\
-├── scripts/
-│   ├── qq_wechat_bridge.py      # QQ ↔ WeChat 桥接
-│   ├── wechat_interact.py       # UIA 监控自动回复 Bot
-│   └── send_file_wechat.py      # CF_HDROP 剪贴板文件传输
-├── data/
-│   ├── WeChatWin_4.1.6.exe      # 安装包 (219MB)
-│   ├── pywechat_report.pdf      # pywechat 调研报告
-│   └── wechat_*.tar.gz          # 聊天记录备份
-└── skills/productivity/
-    └── qq-wechat-bridge/        # Hermes Skill
+hermes-home-server-guide/
+├── docs/wechat-automation.md   # 本文档
+└── code/
+    ├── monitor_bot.py          # UIA 监控自动回复 Bot
+    └── send_file.py            # CF_HDROP 剪贴板文件传输
 ```
 
 ## 参考
