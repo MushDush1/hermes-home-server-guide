@@ -22,6 +22,7 @@
 
 ```bash
 pip install pywechat127
-python code/monitor_bot.py   # 启动 UIA 监控 Bot
-python code/send_file.py     # 剪贴板传文件
+python code/monitor_bot.py      # 启动 UIA 监控 Bot
+python code/send_file.py        # 剪贴板传文件
+python code/pywinauto_uia.py    # UIA 后端用法参考
 ```
